@@ -127,3 +127,14 @@ Uso em Eventos: Callbacks são amplamente usados em programação de eventos, co
 Callback Hell: Quando callbacks são aninhados em várias camadas, o código pode se tornar difícil de ler e manter. Esse problema é conhecido como “callback hell” ou “pyramid of doom”. Promises e async/await são soluções para mitigar esse problema.
 
 Se você estiver trabalhando com uma ling
+
+
+## Quick type
+
+Ferramenta para auxiiar a tranformar o retorno da API em interfaces typcript
+
+https://quicktype.io/
+
+## Manter um campo como opcional na interface
+Exemplo: Adicionasse o sinal ? após a declaração da variável
+title?: string;
