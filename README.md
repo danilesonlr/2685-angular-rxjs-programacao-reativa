@@ -198,3 +198,39 @@ html
 
 Os pipes são uma maneira poderosa de manipular e formatar dados de forma declarativa em seus templates Angular.
 
+
+
+## Typewriter Header
+O Typewriter Header é uma técnica de design onde o texto parece ser digitado em tempo real, criando um efeito de digitação. Esse efeito pode ser usado para dar uma sensação dinâmica e interativa ao seu site ou aplicação.
+
+
+## Buscar dinâmica com keyUP
+
+No Angular, o evento keyup é um evento nativo do DOM que é acionado quando uma tecla é liberada (ou seja, quando o usuário solta uma tecla após pressioná-la). Em Angular, você pode usar esse evento para executar uma função sempre que uma tecla é pressionada e liberada.
+
+Exemplo (keyup)="buscarLivros()"
+
+## Convensão para declarar variaveis do tipo observabo deve utilizar o $
+exemplo:
+ livrosEncontrados$
+
+
+## SwitchMap
+
+No Angular, o operador switchMap é uma ferramenta poderosa da biblioteca RxJS, usada para manipulação e transformação de fluxos de dados em Observables. Ele é especialmente útil para cenários em que você precisa cancelar operações anteriores quando uma nova operação é emitida, como em buscas em tempo real ou quando uma ação do usuário dispara uma série de eventos.
+
+O que é switchMap?
+switchMap é um operador que mapeia um Observable para outro Observable e emite os valores desse novo Observable. Se um novo valor for emitido pelo Observable de origem antes que o Observable interno tenha completado, switchMap cancela a assinatura do Observable interno anterior e se inscreve no novo Observable.
+
+Isso é útil em cenários como pesquisas em tempo real, onde você quer garantir que apenas a pesquisa mais recente seja considerada, ignorando resultados de pesquisas anteriores.
+
+
+## Operadores RxJS
+
+switchMap - Operador de Transformação. Cancela requisições de observables anteriores, emitindo valores apenas do Observable projetado mais recentemente.
+
+filter - Operador de filtragem. Filtra os itens emitidos pelo Observable de origem, permitindo apenas aqueles que satisfaçam uma condição especificada.
+
+debounceTime - Operador de filtragem. Retorna um Observable que atrasa as emissões do Observable de origem pelo tempo especificado.
+
+distinctUntilChanged - Operador de filtragem. Retorna um Observable que emite todos os valores enviados pelo observable de origem se forem distintos em comparação com o último valor emitido pelo observable de resultado.
