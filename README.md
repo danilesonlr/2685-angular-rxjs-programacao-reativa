@@ -107,6 +107,8 @@ Exemplo em JavaScript:
 
 javascript
 Copiar código
+
+```
 function fetchData(callback) {
     setTimeout(() => {
         // Simula uma operação assíncrona (como uma requisição de API)
@@ -118,6 +120,7 @@ function fetchData(callback) {
 function handleData(data) {
     console.log(data); // Processa os dados recebidos
 }
+```
 
 fetchData(handleData); // Passa a função handleData como callback para fetchData
 Evita Bloqueios: Em operações assíncronas, callbacks ajudam a evitar bloqueios no código, permitindo que o programa continue executando enquanto aguarda a conclusão de uma tarefa.
@@ -138,3 +141,60 @@ https://quicktype.io/
 ## Manter um campo como opcional na interface
 Exemplo: Adicionasse o sinal ? após a declaração da variável
 title?: string;
+
+## Pipes do Angular
+
+Os pipes são usados para transformar dados na exibição. Eles permitem que você formate valores de maneira simples diretamente no template HTML. Por exemplo, você pode usar pipes para formatar datas, números, textos, entre outros.
+
+Aqui estão alguns exemplos de pipes integrados do Angular:
+
+DatePipe: Formata uma data.
+
+html
+
+    {{ today | date:'shortDate' }}
+
+    CurrencyPipe: Formata um número como moeda.
+
+html
+
+    {{ price | currency:'USD' }}
+    DecimalPipe: Formata números decimais.
+
+html
+
+    {{ number | number:'1.2-2' }}
+    PercentPipe: Formata um número como percentual.
+
+html
+
+    {{ percentage | percent }}
+
+Você também pode criar seus próprios pipes personalizados para atender às necessidades específicas do seu aplicativo. Para criar um pipe personalizado, você deve definir uma classe com o decorador @Pipe e implementar o método transform. Aqui está um exemplo básico:
+
+typescript
+
+```
+    import { Pipe, PipeTransform } from '@angular/core';
+
+    @Pipe({
+    name: 'reverse'
+    })
+    export class ReversePipe implements PipeTransform {
+    transform(value: string): string {
+        return value.split('').reverse().join('');
+    }
+    }
+```
+
+#### Você tambem pode criar um novo pipe utilizando a linha de comando
+#### ng g pipe pipes/autoria
+
+Então, você pode usar esse pipe em seu template:
+
+html
+
+    {{ 'Hello' | reverse }} <!-- Output: 'olleH' -->
+
+Os pipes são uma maneira poderosa de manipular e formatar dados de forma declarativa em seus templates Angular.
+
